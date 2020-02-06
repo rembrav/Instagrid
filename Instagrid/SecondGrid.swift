@@ -21,6 +21,7 @@ final class SecondGrid: UIView, GridType {
     }
     
     private func initialize() {
-        backgroundColor = .red
+        backgroundColor = .green
+        
     }
 }

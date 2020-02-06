@@ -75,6 +75,7 @@ final class HomeViewController: UIViewController {
 
     @IBAction private func didPressFirstGrid(_ sender: UIButton) {
         viewModel.didPressFirstGrid()
+        firstGridButton.UIImage =
     }
 
     @IBAction func didPressSecondGrid(_ sender: UIButton) {
