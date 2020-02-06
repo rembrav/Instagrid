@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Insta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd9-cp-Ozx">
+                                <rect key="frame" x="129" y="67" width="117" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="safeArea" id="2w1-AH-G3Z"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="4On-6j-krD">
+                                <rect key="frame" x="37" y="148" width="300" height="537.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7mA-2K-r5T">
+                                        <rect key="frame" x="45" y="0.0" width="210" height="41.666666666666664"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="SuA-ke-KOb">
+                                                <rect key="frame" x="102.66666666666666" y="0.0" width="4.6666666666666714" height="3.3333333333333335"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="czL-zA-LTl">
+                                                <rect key="frame" x="0.0" y="11.333333333333334" width="210" height="30.333333333333329"/>
+                                                <viewLayoutGuide key="safeArea" id="ovI-cl-bgr"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rtv-rv-cbY" userLabel="Main grid View">
+                                        <rect key="frame" x="0.0" y="99.666666666666686" width="300" height="300"/>
+                                        <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jpD-tA-toX">
+                                        <rect key="frame" x="0.0" y="457.66666666666669" width="300" height="80.000000000000057"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVt-4o-waJ" userLabel="Left Button LayoutChoice">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="YCR-nf-JZn"/>
+                                                    <constraint firstAttribute="width" secondItem="xVt-4o-waJ" secondAttribute="height" multiplier="1:1" id="aLg-L9-vwf"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Layout 1"/>
+                                                <connections>
+                                                    <action selector="didPressFirstGrid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pih-He-pkl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRV-KM-57I" userLabel="Center Button LayoutChoice">
+                                                <rect key="frame" x="110" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="tRV-KM-57I" secondAttribute="height" multiplier="1:1" id="C9t-Rq-z8N"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Layout 2"/>
+                                                <connections>
+                                                    <action selector="didPressSecondGrid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azA-jm-JBq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVy-n0-M3p" userLabel="Right Button LayoutChoice">
+                                                <rect key="frame" x="220" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hVy-n0-M3p" secondAttribute="height" multiplier="1:1" id="guL-uW-rmW"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Layout 3"/>
+                                                <connections>
+                                                    <action selector="didPressThirdGrid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="12c-f3-6G6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <variation key="heightClass=compact" axis="vertical"/>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70954990389999995" green="0.84259426589999997" blue="0.90135818720000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="appNameLabel" destination="Jd9-cp-Ozx" id="Zwd-Ir-MWj"/>
+                        <outlet property="firstGridButton" destination="xVt-4o-waJ" id="j1v-lv-S4g"/>
+                        <outlet property="gridContainerView" destination="Rtv-rv-cbY" id="sl2-en-JF1"/>
+                        <outlet property="secondGridButton" destination="tRV-KM-57I" id="L41-yU-Ze2"/>
+                        <outlet property="swipeImageView" destination="SuA-ke-KOb" id="Jd8-g0-f2l"/>
+                        <outlet property="swipeLabel" destination="czL-zA-LTl" id="vDw-CU-t6U"/>
+                        <outlet property="thirdGridButton" destination="hVy-n0-M3p" id="fIK-l7-aTZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.2" y="103.44827586206897"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
+        <image name="Layout 1" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Layout 2" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Layout 3" width="26.666666030883789" height="26.666666030883789"/>
+    </resources>
+</document>
