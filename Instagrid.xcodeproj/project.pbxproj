@@ -19,7 +19,9 @@
 		AD5B054523E8663E00C0EC5D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B054423E8663E00C0EC5D /* HomeViewModel.swift */; };
 		AD6284B823E0A15300D67581 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD6284B723E0A15300D67581 /* ThirstySoftRegular.otf */; };
 		AD6284BA23E0A16300D67581 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD6284B923E0A16300D67581 /* Delm-Medium.otf */; };
-		ADA7EA6423EC4A8B009385CA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA7EA6323EC4A8B009385CA /* Default-568h@2x.png */; };
+		AD74B5DB23F1A00C0030A556 /* FirstGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD74B5DA23F1A00C0030A556 /* FirstGrid.xib */; };
+		AD74B5DD23F1A0260030A556 /* SecondGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD74B5DC23F1A0260030A556 /* SecondGrid.xib */; };
+		AD74B5DF23F1A0320030A556 /* ThirdGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD74B5DE23F1A0320030A556 /* ThirdGrid.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +39,9 @@
 		AD5B054423E8663E00C0EC5D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AD6284B723E0A15300D67581 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		AD6284B923E0A16300D67581 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
-		ADA7EA6323EC4A8B009385CA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AD74B5DA23F1A00C0030A556 /* FirstGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstGrid.xib; sourceTree = "<group>"; };
+		AD74B5DC23F1A0260030A556 /* SecondGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondGrid.xib; sourceTree = "<group>"; };
+		AD74B5DE23F1A0320030A556 /* ThirdGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdGrid.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,6 @@
 		AD575F0223DF298D00BF7963 = {
 			isa = PBXGroup;
 			children = (
-				ADA7EA6323EC4A8B009385CA /* Default-568h@2x.png */,
 				AD575F0D23DF298D00BF7963 /* Instagrid */,
 				AD575F0C23DF298D00BF7963 /* Products */,
 			);
@@ -84,9 +87,9 @@
 				AD575F1423DF298D00BF7963 /* Main.storyboard */,
 				AD5B054223E85FE800C0EC5D /* HomeViewController.swift */,
 				AD5B054423E8663E00C0EC5D /* HomeViewModel.swift */,
-				AD5989A223EC09B100283820 /* FirstGrid.swift */,
-				AD5989A623EC2B1300283820 /* SecondGrid.swift */,
-				AD5989A823EC2B2D00283820 /* ThirdGrid.swift */,
+				AD74B5D723F19E5B0030A556 /* First Grid */,
+				AD74B5D923F19E770030A556 /* SecondGrid */,
+				AD74B5D823F19E740030A556 /* ThirdGrid */,
 				AD5989A423EC09BD00283820 /* GridType.swift */,
 			);
 			name = Sources;
@@ -102,6 +105,33 @@
 				AD575F1C23DF298F00BF7963 /* Info.plist */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		AD74B5D723F19E5B0030A556 /* First Grid */ = {
+			isa = PBXGroup;
+			children = (
+				AD74B5DA23F1A00C0030A556 /* FirstGrid.xib */,
+				AD5989A223EC09B100283820 /* FirstGrid.swift */,
+			);
+			path = "First Grid";
+			sourceTree = "<group>";
+		};
+		AD74B5D823F19E740030A556 /* ThirdGrid */ = {
+			isa = PBXGroup;
+			children = (
+				AD74B5DE23F1A0320030A556 /* ThirdGrid.xib */,
+				AD5989A823EC2B2D00283820 /* ThirdGrid.swift */,
+			);
+			name = ThirdGrid;
+			sourceTree = "<group>";
+		};
+		AD74B5D923F19E770030A556 /* SecondGrid */ = {
+			isa = PBXGroup;
+			children = (
+				AD74B5DC23F1A0260030A556 /* SecondGrid.xib */,
+				AD5989A623EC2B1300283820 /* SecondGrid.swift */,
+			);
+			name = SecondGrid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +194,12 @@
 			files = (
 				AD575F1B23DF298F00BF7963 /* LaunchScreen.storyboard in Resources */,
 				AD6284BA23E0A16300D67581 /* Delm-Medium.otf in Resources */,
+				AD74B5DB23F1A00C0030A556 /* FirstGrid.xib in Resources */,
+				AD74B5DD23F1A0260030A556 /* SecondGrid.xib in Resources */,
 				AD575F1823DF298F00BF7963 /* Assets.xcassets in Resources */,
 				AD6284B823E0A15300D67581 /* ThirstySoftRegular.otf in Resources */,
 				AD575F1623DF298D00BF7963 /* Main.storyboard in Resources */,
-				ADA7EA6423EC4A8B009385CA /* Default-568h@2x.png in Resources */,
+				AD74B5DF23F1A0320030A556 /* ThirdGrid.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

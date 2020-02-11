@@ -1,6 +1,6 @@
 //
 //  HomeViewModel.swift
-//  Insta
+//  Instagrid
 //
 //  Created by REMY on 03/02/2020.
 //  Copyright © 2020 RPELG. All rights reserved.
@@ -28,8 +28,8 @@ final class HomeViewModel {
     
     func viewDidLoad(){
         appTitleText?("Instagrid")
-        swipeTitleText?("swipe-up")
-        swipeArrowName?("up")
+        swipeTitleText?("Swipe up to share")
+        swipeArrowName?("Arrow Up")
         selectedGridConfiguration?(.firstGrid)
     }
 
@@ -44,7 +44,18 @@ final class HomeViewModel {
     func didPressThirdGrid() {
         selectedGridConfiguration?(.thirdGrid)
     }
+    
+    // Ajouter les fonctions pour recuperer le changement d'orientation au nombre de 2
+    
+    func portraitRotation() {
+        swipeArrowName?("Arrow Up")
+        swipeTitleText?("Swipe up to share")
+    }
+    
+    func landscapeRotation() {
+        swipeArrowName?("Arrow Left")
+        swipeTitleText?("Swipe left to share")
+    }
 
-    // Ajouter les fonction pour recuperer le changement d'orientation
     
 }
