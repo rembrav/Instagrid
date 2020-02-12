@@ -47,12 +47,12 @@ final class HomeViewModel {
     
     // Ajouter les fonctions pour recuperer le changement d'orientation au nombre de 2
     
-    func portraitRotation() {
+    func addPortraitRotation() {
         swipeArrowName?("Arrow Up")
         swipeTitleText?("Swipe up to share")
     }
     
-    func landscapeRotation() {
+    func addlLandscapeRotation() {
         swipeArrowName?("Arrow Left")
         swipeTitleText?("Swipe left to share")
     }

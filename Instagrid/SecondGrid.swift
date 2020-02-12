@@ -10,6 +10,8 @@ import UIKit
 
 final class SecondGrid: UIView, GridType {
     
+    @IBOutlet weak var secondGridView: UIView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
@@ -21,7 +23,21 @@ final class SecondGrid: UIView, GridType {
     }
     
     private func initialize() {
-        backgroundColor = .green
+        backgroundColor = .yellow
         
+    }
+    
+    @IBAction func upLeftPhotoButton(_ sender: UIButton) {
+    }
+    @IBAction func upLeftButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func upRightPhotoButton(_ sender: UIButton) {
+    }
+    @IBAction func upRightButton(_ sender: UIButton) {
+    }
+    @IBAction func downPhotoButton(_ sender: UIButton) {
+    }
+    @IBAction func downButton(_ sender: UIButton) {
     }
 }

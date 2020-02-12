@@ -13,14 +13,14 @@ final class HomeViewController: UIViewController {
     
     @IBOutlet private weak var appNameLabel: UILabel! {
         didSet {
-            appNameLabel.font = UIFont(name: "ThirstySoftRegular",size: 30.0)
+            appNameLabel.font = UIFont(name: "ThirstySoftRegular",size: 30.0) // ne marche pas en paysage
             appNameLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
     }
     @IBOutlet private weak var swipeImageView: UIImageView!
     @IBOutlet private weak var swipeLabel: UILabel! {
         didSet {
-            swipeLabel.font = UIFont(name: "Delm-Medium", size: 26.0)
+            swipeLabel.font = UIFont(name: "Delm-Medium", size: 26.0) // ne marche pas en paysage
             swipeLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
     }
@@ -59,7 +59,6 @@ final class HomeViewController: UIViewController {
                 self.gridContainerView.addSubview(gridOne)
                 self.addSelectedView(on: self.firstGridButton)
                 
-                
             case .secondGrid:
                 let gridTwo = SecondGrid()
                 self.gridContainerView.layoutIfNeeded()
@@ -79,20 +78,7 @@ final class HomeViewController: UIViewController {
     }
     
     
-    // MARK: - Actions
-
-    @IBAction private func didPressFirstGrid(_ sender: UIButton) {
-        viewModel.didPressFirstGrid()
-    }
-
-    @IBAction func didPressSecondGrid(_ sender: UIButton) {
-        viewModel.didPressSecondGrid()
-    }
-    
-    @IBAction func didPressThirdGrid(_ sender: UIButton) {
-        viewModel.didPressThirdGrid()
-    }
-    
+ 
     // MARK: - Helpers
     
     private func addSelectedView (on button: UIButton) {
@@ -115,4 +101,19 @@ final class HomeViewController: UIViewController {
             thirdGridButton.subviews.last?.removeFromSuperview()
         }
     }
+    
+    // MARK: - Actions
+
+     @IBAction private func didPressFirstGrid(_ sender: UIButton) {
+         viewModel.didPressFirstGrid()
+     }
+
+     @IBAction func didPressSecondGrid(_ sender: UIButton) {
+         viewModel.didPressSecondGrid()
+     }
+     
+     @IBAction func didPressThirdGrid(_ sender: UIButton) {
+         viewModel.didPressThirdGrid()
+     }
+     
 }
