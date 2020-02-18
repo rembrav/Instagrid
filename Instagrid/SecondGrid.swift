@@ -10,7 +10,19 @@ import UIKit
 
 final class SecondGrid: UIView, GridType {
     
-    @IBOutlet weak var secondGridView: UIView!
+    
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet weak var topLeftButton: UIButton!
+    @IBOutlet weak var topRightButton: UIButton!
+    @IBOutlet weak var downButton: UIButton!
+    
+    // MARK: - Properties
+    
+    private var viewModel: GridViewModel!
+    
+    private weak var delegate: GridDelegate?
+     
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,21 +35,65 @@ final class SecondGrid: UIView, GridType {
     }
     
     private func initialize() {
-        backgroundColor = .yellow
-        
+        Bundle(for: type(of: self)).loadNibNamed(String(describing: SecondGrid.self),owner: self,options: nil)
+        addSubview(contentView)
+        contentView.fillWithSuperView(self)
     }
     
-    @IBAction func upLeftPhotoButton(_ sender: UIButton) {
-    }
-    @IBAction func upLeftButton(_ sender: UIButton) {
+    // MARK: - Actions
+    
+    func set (image: UIImage, for spot: Spot) {
+        let imageView = UIImageView(image:image)
+        switch spot {
+        case .topLeft:
+            topLeftButton.removeSubviewsAlreadyLoaded()
+            topLeftButton.addSubview(imageView)
+            setConstraints(for: imageView, with: topLeftButton)
+        case .topRight:
+            topRightButton.removeSubviewsAlreadyLoaded()
+            topRightButton.addSubview(imageView)
+            setConstraints(for: imageView, with: topRightButton)
+        case .bottom:
+            downButton.removeSubviewsAlreadyLoaded()
+            downButton.addSubview(imageView)
+            setConstraints(for: imageView, with: downButton)
+        default: break
+        }
     }
     
-    @IBAction func upRightPhotoButton(_ sender: UIButton) {
+    private func setConstraints(for image: UIImageView, with button: UIButton) {
+        image.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            image.leftAnchor.constraint(equalTo: button.leftAnchor),
+            image.rightAnchor.constraint(equalTo: button.rightAnchor),
+            image.bottomAnchor.constraint(equalTo: button.bottomAnchor),
+            image.topAnchor.constraint(equalTo: button.topAnchor)
+        ])
     }
-    @IBAction func upRightButton(_ sender: UIButton) {
+    // la grille se connecte au viewModel
+    func configure(with viewModelType: GridViewModel, delegate: GridDelegate) {
+        self.viewModel = viewModelType
+        self.delegate = delegate
+        bind(to: self.viewModel)
     }
-    @IBAction func downPhotoButton(_ sender: UIButton) {
+    // Au moment du bind avec la var reactive: tu vas renvoyer la methode du delegate.
+    private func bind(to viewModel: GridViewModel) {
+        viewModel.selectedSpot = { [weak self] spot in
+            self?.delegate?.didSelect(spot: spot)
+        }
     }
-    @IBAction func downButton(_ sender: UIButton) {
+    
+    @IBAction func didSelectButton(_ sender: UIButton) {
+        let index = sender.tag
+        viewModel?.didSelectButton(at: index)
+        if index == 1 {
+            sender.backgroundColor = .red
+        }
+        else if index == 2 {
+            sender.backgroundColor = .green
+        }
+        else {
+            sender.backgroundColor = .blue
+        }
     }
 }

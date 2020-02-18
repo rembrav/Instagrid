@@ -56,6 +56,4 @@ final class HomeViewModel {
         swipeArrowName?("Arrow Left")
         swipeTitleText?("Swipe left to share")
     }
-
-    
 }

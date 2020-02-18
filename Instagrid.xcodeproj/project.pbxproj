@@ -22,6 +22,7 @@
 		AD74B5DB23F1A00C0030A556 /* FirstGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD74B5DA23F1A00C0030A556 /* FirstGrid.xib */; };
 		AD74B5DD23F1A0260030A556 /* SecondGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD74B5DC23F1A0260030A556 /* SecondGrid.xib */; };
 		AD74B5DF23F1A0320030A556 /* ThirdGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD74B5DE23F1A0320030A556 /* ThirdGrid.xib */; };
+		AD90AC7123F541F400E9B7C2 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90AC7023F541F400E9B7C2 /* GridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		AD74B5DA23F1A00C0030A556 /* FirstGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstGrid.xib; sourceTree = "<group>"; };
 		AD74B5DC23F1A0260030A556 /* SecondGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondGrid.xib; sourceTree = "<group>"; };
 		AD74B5DE23F1A0320030A556 /* ThirdGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdGrid.xib; sourceTree = "<group>"; };
+		AD90AC7023F541F400E9B7C2 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +89,7 @@
 				AD575F1423DF298D00BF7963 /* Main.storyboard */,
 				AD5B054223E85FE800C0EC5D /* HomeViewController.swift */,
 				AD5B054423E8663E00C0EC5D /* HomeViewModel.swift */,
-				AD74B5D723F19E5B0030A556 /* First Grid */,
-				AD74B5D923F19E770030A556 /* SecondGrid */,
-				AD74B5D823F19E740030A556 /* ThirdGrid */,
-				AD5989A423EC09BD00283820 /* GridType.swift */,
+				AD90AC6F23F5418900E9B7C2 /* Grids */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -132,6 +131,18 @@
 				AD5989A623EC2B1300283820 /* SecondGrid.swift */,
 			);
 			name = SecondGrid;
+			sourceTree = "<group>";
+		};
+		AD90AC6F23F5418900E9B7C2 /* Grids */ = {
+			isa = PBXGroup;
+			children = (
+				AD5989A423EC09BD00283820 /* GridType.swift */,
+				AD90AC7023F541F400E9B7C2 /* GridViewModel.swift */,
+				AD74B5D723F19E5B0030A556 /* First Grid */,
+				AD74B5D923F19E770030A556 /* SecondGrid */,
+				AD74B5D823F19E740030A556 /* ThirdGrid */,
+			);
+			name = Grids;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD90AC7123F541F400E9B7C2 /* GridViewModel.swift in Sources */,
 				AD5989A323EC09B100283820 /* FirstGrid.swift in Sources */,
 				AD575F0F23DF298D00BF7963 /* AppDelegate.swift in Sources */,
 				AD5B054323E85FE800C0EC5D /* HomeViewController.swift in Sources */,

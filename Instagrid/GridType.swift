@@ -9,6 +9,6 @@
 import UIKit
 
 protocol GridType: class {
-//    func set(image: UIView, for spot: Spot)
-//    func configure(with viewModel: GridViewModel, delegate: GridDelegate)
+    func set(image: UIImage, for spot: Spot)
+    func configure(with viewModel: GridViewModel, delegate: GridDelegate)
 }

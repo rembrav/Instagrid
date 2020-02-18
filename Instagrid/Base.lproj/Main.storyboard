@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd9-cp-Ozx">
-                                <rect key="frame" x="141.66666666666666" y="10" width="130.99999999999997" height="35"/>
+                                <rect key="frame" x="122" y="54" width="131" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="04y-Ws-Sn1"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="QzY-3O-haN"/>
@@ -53,18 +53,15 @@
                                         <include reference="svE-53-Nz2"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
-                                </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4On-6j-krD">
-                                <rect key="frame" x="38" y="185" width="338" height="521"/>
+                                <rect key="frame" x="37.666666666666657" y="229" width="300" height="519"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7mA-2K-r5T">
-                                        <rect key="frame" x="64" y="0.0" width="210" height="46.333333333333336"/>
+                                        <rect key="frame" x="45" y="0.0" width="210" height="46.333333333333336"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="SuA-ke-KOb">
-                                                <rect key="frame" x="99.666666666666657" y="0.0" width="11" height="14"/>
+                                                <rect key="frame" x="99.333333333333329" y="0.0" width="11" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="13" id="7Xv-X5-D6M"/>
                                                     <constraint firstAttribute="width" constant="8" id="Dzw-qQ-bSx"/>
@@ -103,9 +100,6 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=compact-widthClass=compact">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                                </variation>
                                             </label>
                                         </subviews>
                                         <constraints>
@@ -124,7 +118,7 @@
                                         </variation>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rtv-rv-cbY" userLabel="Main grid View">
-                                        <rect key="frame" x="19" y="76.333333333333314" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="76.333333333333314" width="300" height="300"/>
                                         <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="55P-1G-YBx"/>
@@ -178,7 +172,7 @@
                                         </variation>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jpD-tA-toX">
-                                        <rect key="frame" x="19" y="441" width="300" height="80"/>
+                                        <rect key="frame" x="0.0" y="439" width="300" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVt-4o-waJ" userLabel="Left Button LayoutChoice">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -507,6 +501,12 @@
                                 <exclude reference="USR-cQ-vuG"/>
                                 <exclude reference="ae8-66-4eR"/>
                                 <exclude reference="ybN-ex-wPp"/>
+                                <exclude reference="2y5-3a-ped"/>
+                                <exclude reference="5gn-le-7vo"/>
+                                <exclude reference="Ecz-Da-Kan"/>
+                                <exclude reference="YcM-Nm-OVV"/>
+                                <exclude reference="kmI-13-uem"/>
+                                <exclude reference="szK-hR-10q"/>
                                 <exclude reference="ALC-4k-bHf"/>
                                 <exclude reference="BHy-9g-cCt"/>
                                 <exclude reference="BTi-qp-z7o"/>
@@ -524,12 +524,6 @@
                                 <exclude reference="oj9-VC-W1s"/>
                                 <exclude reference="qbj-4d-a6d"/>
                                 <exclude reference="bQK-8M-Y5B"/>
-                                <exclude reference="2y5-3a-ped"/>
-                                <exclude reference="5gn-le-7vo"/>
-                                <exclude reference="Ecz-Da-Kan"/>
-                                <exclude reference="YcM-Nm-OVV"/>
-                                <exclude reference="kmI-13-uem"/>
-                                <exclude reference="szK-hR-10q"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -540,6 +534,13 @@
                                 <exclude reference="Zcu-6a-xZt"/>
                                 <exclude reference="ae8-66-4eR"/>
                                 <exclude reference="ybN-ex-wPp"/>
+                                <exclude reference="2y5-3a-ped"/>
+                                <exclude reference="5gn-le-7vo"/>
+                                <exclude reference="7eY-8r-XOr"/>
+                                <exclude reference="Ecz-Da-Kan"/>
+                                <include reference="YcM-Nm-OVV"/>
+                                <exclude reference="fxw-hF-s4x"/>
+                                <include reference="szK-hR-10q"/>
                                 <include reference="ALC-4k-bHf"/>
                                 <exclude reference="BHy-9g-cCt"/>
                                 <exclude reference="BTi-qp-z7o"/>
@@ -558,20 +559,13 @@
                                 <exclude reference="oj9-VC-W1s"/>
                                 <exclude reference="qbj-4d-a6d"/>
                                 <exclude reference="yAf-Zj-yKA"/>
-                                <exclude reference="2y5-3a-ped"/>
-                                <exclude reference="5gn-le-7vo"/>
-                                <exclude reference="7eY-8r-XOr"/>
-                                <exclude reference="Ecz-Da-Kan"/>
-                                <include reference="YcM-Nm-OVV"/>
-                                <exclude reference="fxw-hF-s4x"/>
-                                <include reference="szK-hR-10q"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
-                                <include reference="bQK-8M-Y5B"/>
                                 <exclude reference="fxw-hF-s4x"/>
                                 <include reference="kmI-13-uem"/>
+                                <include reference="bQK-8M-Y5B"/>
                             </mask>
                         </variation>
                     </view>
