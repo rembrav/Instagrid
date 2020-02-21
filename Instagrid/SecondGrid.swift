@@ -46,30 +46,27 @@ final class SecondGrid: UIView, GridType {
         let imageView = UIImageView(image:image)
         switch spot {
         case .topLeft:
-            topLeftButton.removeSubviewsAlreadyLoaded()
+            topLeftButton.removeAllSubviews()
             topLeftButton.addSubview(imageView)
-            setConstraints(for: imageView, with: topLeftButton)
+            imageView.fillWithSuperView(topLeftButton)
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
         case .topRight:
-            topRightButton.removeSubviewsAlreadyLoaded()
+            topRightButton.removeAllSubviews()
             topRightButton.addSubview(imageView)
-            setConstraints(for: imageView, with: topRightButton)
+            imageView.fillWithSuperView(topRightButton)
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
         case .bottom:
-            downButton.removeSubviewsAlreadyLoaded()
+            downButton.removeAllSubviews()
             downButton.addSubview(imageView)
-            setConstraints(for: imageView, with: downButton)
+            imageView.fillWithSuperView(downButton)
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
         default: break
         }
     }
     
-    private func setConstraints(for image: UIImageView, with button: UIButton) {
-        image.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            image.leftAnchor.constraint(equalTo: button.leftAnchor),
-            image.rightAnchor.constraint(equalTo: button.rightAnchor),
-            image.bottomAnchor.constraint(equalTo: button.bottomAnchor),
-            image.topAnchor.constraint(equalTo: button.topAnchor)
-        ])
-    }
     // la grille se connecte au viewModel
     func configure(with viewModelType: GridViewModel, delegate: GridDelegate) {
         self.viewModel = viewModelType
@@ -86,14 +83,6 @@ final class SecondGrid: UIView, GridType {
     @IBAction func didSelectButton(_ sender: UIButton) {
         let index = sender.tag
         viewModel?.didSelectButton(at: index)
-        if index == 1 {
-            sender.backgroundColor = .red
+      
         }
-        else if index == 2 {
-            sender.backgroundColor = .green
-        }
-        else {
-            sender.backgroundColor = .blue
-        }
-    }
 }

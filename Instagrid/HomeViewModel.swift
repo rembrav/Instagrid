@@ -14,6 +14,12 @@ final class HomeViewModel {
         case firstGrid, secondGrid, thirdGrid
     }
     
+//    private var currentGrid: GridConfiguration = .firstGrid {
+//        didSet {
+//            selectedGridConfiguration?(currentGrid)
+//        }
+//    }
+    
     // MARK: - Outputs
     
     var appTitleText: ((String) -> Void)?
@@ -23,6 +29,8 @@ final class HomeViewModel {
     var swipeArrowName: ((String) -> Void)?
 
     var selectedGridConfiguration: ((GridConfiguration) -> Void)?
+    
+    
     
     // MARK: - Inputs
     
@@ -47,13 +55,16 @@ final class HomeViewModel {
     
     // Ajouter les fonctions pour recuperer le changement d'orientation au nombre de 2
     
-    func addPortraitRotation() {
+    func didChangeToCompact() {
         swipeArrowName?("Arrow Up")
         swipeTitleText?("Swipe up to share")
     }
     
-    func addlLandscapeRotation() {
+    func didChangeToRegular() {
         swipeArrowName?("Arrow Left")
         swipeTitleText?("Swipe left to share")
     }
+//    func didClearGrid() {
+//        selectedGridConfiguration?(currentGrid)
+//    }
 }

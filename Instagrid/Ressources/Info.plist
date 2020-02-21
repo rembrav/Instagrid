@@ -47,6 +47,8 @@
 		<string>Delm-Medium.otf</string>
 	</array>
 	<key>NSAppleMusicUsageDescription</key>
-	<string></string>
+	<string>You can select photos to attach to reports.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Our application needs permission to write photos in your library.</string>
 </dict>
 </plist>

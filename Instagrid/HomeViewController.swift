@@ -9,8 +9,6 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
-    // MARK: - Properties
-    
     @IBOutlet private weak var appNameLabel: UILabel! {
         didSet {
             appNameLabel.font = UIFont(name: "ThirstySoftRegular",size: 30.0)
@@ -24,23 +22,45 @@ final class HomeViewController: UIViewController {
             swipeLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
     }
-
-    @IBOutlet private weak var gridContainerView: UIView!
     
+    @IBOutlet private weak var gridContainerView: UIView!
     @IBOutlet private weak var firstGridButton: UIButton!
     @IBOutlet private weak var secondGridButton: UIButton!
     @IBOutlet private weak var thirdGridButton: UIButton!
-
+    
+    // MARK: - Private properties
     private let viewModel = HomeViewModel()
     
-    private var currentSpot: Spot?
+    private lazy var pickerController: UIImagePickerController = {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = .photoLibrary
+        pickerController.allowsEditing = false
+        return pickerController
+    }()
+    
+//    private /*lazy*/ var SwipeleftGestureRecognizer: UISwipeGestureRecognizer = {
+//        let swipeLeftGesture = UIGestureRecognizer(target: self, action:#selector(shareAction()))
+//        swipeLeftGesture.direction = .left
+//        return swipeLeftGesture
+//    }()
+    
+//    private /*lazy*/ var SwipeUpGestureRecognizer: UISwipeGestureRecognizer = {
+//    let swipeUpGesture = UIGestureRecognizer(target: self, action:#selector(shareAction()))
+//    swipeUpGesture.direction = .up
+//    return swipeUpGesture
+//    }()
+//
+    
     
     private var currentGrid: GridType? {
         didSet {
             let viewModel = GridViewModel()
-            self.currentGrid?.configure(with: viewModel, delegate: self)
+            currentGrid?.configure(with: viewModel, delegate: self)
         }
     }
+    private var currentSpot : Spot?
+
     
 // MARK: - View life cycle
     
@@ -54,39 +74,44 @@ final class HomeViewController: UIViewController {
         viewModel.appTitleText = { [weak self] title in
             self?.appNameLabel.text = title
         }
-
+        
         viewModel.swipeTitleText = { [weak self] title in
             self?.swipeLabel.text = title
         }
-
+        
+        viewModel.swipeArrowName = { [weak self] name in
+            self?.swipeImageView.image = UIImage(named: name)
+        }
+        
         viewModel.selectedGridConfiguration = { [weak self] configuration in
             guard let self = self else { return }
             self.removeSelectedViews()
             switch configuration {
             case .firstGrid:
-                HomeViewController.configure(gridView: FirstGrid(),
-                                             on: self.gridContainerView,
-                                             andSelectButton: self.firstGridButton)
+                self.configure(gridView: FirstGrid(),
+                               on: self.gridContainerView,
+                               andSelectButton: self.firstGridButton)
             case .secondGrid:
-                HomeViewController.configure(gridView: SecondGrid(),
-                                             on: self.gridContainerView,
-                                             andSelectButton: self.secondGridButton)
+                self.configure(gridView: SecondGrid(),
+                               on: self.gridContainerView,
+                               andSelectButton: self.secondGridButton)
             case .thirdGrid:
-                HomeViewController.configure(gridView: ThirdGrid(),
-                                             on: self.gridContainerView,
-                                             andSelectButton: self.thirdGridButton)
+                self.configure(gridView: ThirdGrid(),
+                               on: self.gridContainerView,
+                               andSelectButton: self.thirdGridButton)
             }
         }
     }
 
-    private static func configure(gridView: UIView,
-                                  on container: UIView,
-                                  andSelectButton selectedButton: UIButton) {
-        container.removeSubviewsAlreadyLoaded()
+    private func configure(gridView: GridType,
+                           on container: UIView,
+                           andSelectButton selectedButton: UIButton) {
+        self.currentGrid = gridView
+        guard let gridView = gridView as? UIView else { return }
+        container.removeAllSubviews()
         container.addSubview(gridView)
         gridView.fillWithSuperView(container)
-        addSelectedView(on: selectedButton)
-
+        HomeViewController.addSelectedView(on: selectedButton)
     }
 
     // MARK: - Helpers
@@ -112,6 +137,10 @@ final class HomeViewController: UIViewController {
         }
     }
     
+//    private func shareAction(_sender: UIPanGestureRecognizer) {
+//
+//    }
+    
     // MARK: - Actions
 
      @IBAction private func didPressFirstGrid(_ sender: UIButton) {
@@ -125,6 +154,17 @@ final class HomeViewController: UIViewController {
      @IBAction func didPressThirdGrid(_ sender: UIButton) {
          viewModel.didPressThirdGrid()
      }
+
+    // MARK: - Trait Collection
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if traitCollection.horizontalSizeClass == .compact, UIDevice.current.orientation == .portrait {
+            viewModel.didChangeToCompact()
+        } else {
+            viewModel.didChangeToRegular()
+        }
+    }
 }
 
 extension UIView {
@@ -136,15 +176,25 @@ extension UIView {
             topAnchor.constraint(equalTo: view.topAnchor),
             bottomAnchor.constraint(equalTo: view.bottomAnchor)])
     }
-}
-extension UIView {
-    func removeSubviewsAlreadyLoaded() {
-           self.subviews.forEach { $0.removeFromSuperview() }
-       }
-}
-extension HomeViewController: GridDelegate {
-    func didSelect(spot: Spot) {
-        self.currentSpot = spot
+
+    func removeAllSubviews() {
+        subviews.forEach { $0.removeFromSuperview() }
     }
 }
 
+extension HomeViewController: GridDelegate {
+    func didSelect(spot: Spot) {
+        self.currentSpot = spot
+        DispatchQueue.main.async {
+            self.show(self.pickerController, sender: nil)
+        }
+    }
+}
+
+extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage, let spot = currentSpot {
+            self.currentGrid?.set(image: image, for: spot)
+        }
+        dismiss(animated: true, completion: nil)} // fermer le picker
+}
