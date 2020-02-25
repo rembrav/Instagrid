@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd9-cp-Ozx">
-                                <rect key="frame" x="122" y="54" width="131" height="35"/>
+                                <rect key="frame" x="344" y="5" width="125" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="04y-Ws-Sn1"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="QzY-3O-haN"/>
@@ -55,13 +55,13 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4On-6j-krD">
-                                <rect key="frame" x="37.666666666666657" y="229" width="300" height="519"/>
+                                <rect key="frame" x="49" y="42" width="715" height="304"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7mA-2K-r5T">
-                                        <rect key="frame" x="45" y="0.0" width="210" height="46.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="128.33333333333334" width="210" height="47.333333333333343"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="SuA-ke-KOb">
-                                                <rect key="frame" x="99.333333333333329" y="0.0" width="11" height="14"/>
+                                                <rect key="frame" x="101" y="0.0" width="8" height="13"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="13" id="7Xv-X5-D6M"/>
                                                     <constraint firstAttribute="width" constant="8" id="Dzw-qQ-bSx"/>
@@ -96,7 +96,7 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="czL-zA-LTl">
-                                                <rect key="frame" x="0.0" y="15.999999999999998" width="210" height="30.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="17" width="210" height="30.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -118,7 +118,7 @@
                                         </variation>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rtv-rv-cbY" userLabel="Main grid View">
-                                        <rect key="frame" x="0.0" y="76.333333333333314" width="300" height="300"/>
+                                        <rect key="frame" x="240" y="2" width="300" height="300"/>
                                         <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="55P-1G-YBx"/>
@@ -172,7 +172,7 @@
                                         </variation>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jpD-tA-toX">
-                                        <rect key="frame" x="0.0" y="439" width="300" height="80"/>
+                                        <rect key="frame" x="635" y="2" width="80" height="300"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVt-4o-waJ" userLabel="Left Button LayoutChoice">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -207,7 +207,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRV-KM-57I" userLabel="Center Button LayoutChoice">
-                                                <rect key="frame" x="110" y="0.0" width="80" height="80"/>
+                                                <rect key="frame" x="0.0" y="110" width="80" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="tRV-KM-57I" secondAttribute="height" multiplier="80:27" id="ETV-D7-AC5"/>
                                                     <constraint firstAttribute="height" constant="80" id="FE2-AH-jmx"/>
@@ -254,7 +254,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVy-n0-M3p" userLabel="Right Button LayoutChoice">
-                                                <rect key="frame" x="220" y="0.0" width="80" height="80"/>
+                                                <rect key="frame" x="0.0" y="220" width="80" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="HdF-bl-84l"/>
                                                     <constraint firstAttribute="height" constant="80" id="MX4-IR-nRe"/>
@@ -311,7 +311,7 @@
                                                 <exclude reference="gEk-Qt-gbK"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=compact" axis="vertical" spacing="17">
+                                        <variation key="heightClass=compact" axis="vertical" spacing="30">
                                             <mask key="constraints">
                                                 <exclude reference="8cs-hv-D6o"/>
                                                 <exclude reference="On9-Gm-ihW"/>

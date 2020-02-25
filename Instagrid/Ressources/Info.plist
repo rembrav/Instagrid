@@ -49,6 +49,6 @@
 	<key>NSAppleMusicUsageDescription</key>
 	<string>You can select photos to attach to reports.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Our application needs permission to write photos in your library.</string>
+	<string>Our application needs permission to save photos in your library.</string>
 </dict>
 </plist>

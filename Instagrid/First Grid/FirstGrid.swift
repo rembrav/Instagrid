@@ -45,27 +45,23 @@ final class FirstGrid: UIView, GridType {
     
     func set(image: UIImage, for spot: Spot) {
         let imageView = UIImageView(image: image)
-        //imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         switch spot {
         case .top:
             upButton.removeAllSubviews()
             upButton.addSubview(imageView)
             imageView.fillWithSuperView(upButton)
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
         case .bottomLeft:
             downLeftButton.removeAllSubviews()
             downLeftButton.addSubview(imageView)
             imageView.fillWithSuperView(downLeftButton)
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
         case .bottomRight:
             downRightButton.removeAllSubviews()
             downRightButton.addSubview(imageView)
             imageView.fillWithSuperView(downRightButton)
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
-        default: break
+        default:
+            break
         }
     }
     

@@ -14,12 +14,6 @@ final class HomeViewModel {
         case firstGrid, secondGrid, thirdGrid
     }
     
-//    private var currentGrid: GridConfiguration = .firstGrid {
-//        didSet {
-//            selectedGridConfiguration?(currentGrid)
-//        }
-//    }
-    
     // MARK: - Outputs
     
     var appTitleText: ((String) -> Void)?
@@ -64,7 +58,6 @@ final class HomeViewModel {
         swipeArrowName?("Arrow Left")
         swipeTitleText?("Swipe left to share")
     }
-//    func didClearGrid() {
-//        selectedGridConfiguration?(currentGrid)
-//    }
+
+
 }

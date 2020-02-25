@@ -44,31 +44,25 @@ final class ThirdGrid: UIView, GridType  {
     
     func set (image: UIImage, for spot: Spot) {
         let imageView = UIImageView(image:image)
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         switch spot {
         case .topLeft:
             topLeftButton.removeAllSubviews()
             topLeftButton.addSubview(imageView)
             imageView.fillWithSuperView(topLeftButton)
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
         case .topRight:
             topRightButton.removeAllSubviews()
             topRightButton.addSubview(imageView)
             imageView.fillWithSuperView(topRightButton)
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
         case .bottomLeft:
             downLeftButton.removeAllSubviews()
             downLeftButton.addSubview(imageView)
             imageView.fillWithSuperView(downLeftButton)
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
         case .bottomRight:
             downRightButton.removeAllSubviews()
             downRightButton.addSubview(imageView)
             imageView.fillWithSuperView(downRightButton)
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
         default: break
         }
     }

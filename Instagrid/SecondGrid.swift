@@ -44,25 +44,21 @@ final class SecondGrid: UIView, GridType {
     
     func set (image: UIImage, for spot: Spot) {
         let imageView = UIImageView(image:image)
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         switch spot {
         case .topLeft:
             topLeftButton.removeAllSubviews()
             topLeftButton.addSubview(imageView)
             imageView.fillWithSuperView(topLeftButton)
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
         case .topRight:
             topRightButton.removeAllSubviews()
             topRightButton.addSubview(imageView)
             imageView.fillWithSuperView(topRightButton)
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
         case .bottom:
             downButton.removeAllSubviews()
             downButton.addSubview(imageView)
             imageView.fillWithSuperView(downButton)
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
         default: break
         }
     }
