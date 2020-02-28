@@ -9,7 +9,7 @@
 import Foundation
 
 final class HomeViewModel {
-
+    
     enum GridConfiguration {
         case firstGrid, secondGrid, thirdGrid
     }
@@ -19,12 +19,10 @@ final class HomeViewModel {
     var appTitleText: ((String) -> Void)?
     
     var swipeTitleText: ((String) -> Void)?
-
+    
     var swipeArrowName: ((String) -> Void)?
-
+    
     var selectedGridConfiguration: ((GridConfiguration) -> Void)?
-    
-    
     
     // MARK: - Inputs
     
@@ -34,20 +32,18 @@ final class HomeViewModel {
         swipeArrowName?("Arrow Up")
         selectedGridConfiguration?(.firstGrid)
     }
-
+    
     func didPressFirstGrid() {
         selectedGridConfiguration?(.firstGrid)
     }
-
+    
     func didPressSecondGrid() {
         selectedGridConfiguration?(.secondGrid)
     }
-
+    
     func didPressThirdGrid() {
         selectedGridConfiguration?(.thirdGrid)
     }
-    
-    // Ajouter les fonctions pour recuperer le changement d'orientation au nombre de 2
     
     func didChangeToCompact() {
         swipeArrowName?("Arrow Up")
@@ -58,6 +54,4 @@ final class HomeViewModel {
         swipeArrowName?("Arrow Left")
         swipeTitleText?("Swipe left to share")
     }
-
-
 }

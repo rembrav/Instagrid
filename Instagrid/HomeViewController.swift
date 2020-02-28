@@ -58,8 +58,8 @@ final class HomeViewController: UIViewController {
             currentGrid?.configure(with: viewModel, delegate: self)
         }
     }
-    private var currentSpot : Spot?
     
+    private var currentSpot : Spot?
     
     // MARK: - View life cycle
     
@@ -70,7 +70,6 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGestures()
         bind(to: viewModel)
         viewModel.viewDidLoad()
     }
@@ -116,12 +115,12 @@ final class HomeViewController: UIViewController {
         container.removeAllSubviews()
         container.addSubview(gridView)
         gridView.fillWithSuperView(container)
-        HomeViewController.addSelectedView(on: selectedButton)
+        addSelectedView(on: selectedButton)
     }
     
     // MARK: - Helpers
     
-    private static func addSelectedView (on button: UIButton) {
+    private func addSelectedView (on button: UIButton) {
         let imageSelected = UIImage(named: "Selected")
         let imageView = UIImageView(image: imageSelected)
         button.addSubview(imageView)
@@ -167,24 +166,26 @@ final class HomeViewController: UIViewController {
     
     func sharePhoto() {
         UIGraphicsBeginImageContext(gridContainerView.frame.size)
-        gridContainerView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        gridContainerView.layer.render(in: context)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return }
+        UIGraphicsEndImageContext()
         
-        let aVControl = UIActivityViewController(activityItems: [image!],applicationActivities: nil )
-        aVControl.popoverPresentationController?.sourceView = self.view
-        aVControl.completionWithItemsHandler = {activity,success,items,error in
+        let activityViewController = UIActivityViewController(activityItems: [image],applicationActivities: nil )
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.completionWithItemsHandler = { _, _, _, _ in
             if self.swipeUpGestureRecognizer.direction == .up {
                 UIView.animate(withDuration: 0.5, animations: {
                     self.gridContainerView.transform = CGAffineTransform(translationX: 0, y: 0)
                     self.gridContainerView.alpha = 1
                 })
-        } else  {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.gridContainerView.transform = CGAffineTransform(translationX: 0, y: 0)
-            })
+            } else  {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.gridContainerView.transform = CGAffineTransform(translationX: 0, y: 0)
+                })
             }
         }
-        self.present(aVControl, animated: true, completion: nil)
+        present(activityViewController, animated: true)
     }
     
     // MARK: - Actions
@@ -211,16 +212,15 @@ final class HomeViewController: UIViewController {
     
     
     private func setGestures() {
-        guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation
-            else { return }
+        let orientation = UIDevice.current.orientation
         gridContainerView.gestureRecognizers?.removeAll()
-        
-        if orientation.isPortrait {
-            gridContainerView.addGestureRecognizer(swipeUpGestureRecognizer)
-            viewModel.didChangeToCompact()
-        } else {
+
+        if orientation.isLandscape {
             gridContainerView.addGestureRecognizer(swipeleftGestureRecognizer)
             viewModel.didChangeToRegular()
+        } else {
+            gridContainerView.addGestureRecognizer(swipeUpGestureRecognizer)
+            viewModel.didChangeToCompact()
         }
     }
 }
@@ -234,7 +234,7 @@ extension UIView {
             topAnchor.constraint(equalTo: view.topAnchor),
             bottomAnchor.constraint(equalTo: view.bottomAnchor)])
     }
-    
+
     func removeAllSubviews() {
         subviews.forEach { $0.removeFromSuperview() }
     }
@@ -254,5 +254,6 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         if let image = info[.originalImage] as? UIImage, let spot = currentSpot {
             self.currentGrid?.set(image: image, for: spot)
         }
-        dismiss(animated: true, completion: nil)} // fermer le picker
+        dismiss(animated: true)
+    }
 }

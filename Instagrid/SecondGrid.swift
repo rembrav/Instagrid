@@ -10,18 +10,19 @@ import UIKit
 
 final class SecondGrid: UIView, GridType {
     
-    
+    // MARK: - Outputs
+
     @IBOutlet private weak var contentView: UIView!
-    @IBOutlet weak var topLeftButton: UIButton!
-    @IBOutlet weak var topRightButton: UIButton!
-    @IBOutlet weak var downButton: UIButton!
+    @IBOutlet private weak var topLeftButton: UIButton!
+    @IBOutlet private weak var topRightButton: UIButton!
+    @IBOutlet private weak var downButton: UIButton!
     
     // MARK: - Properties
     
     private var viewModel: GridViewModel!
     
     private weak var delegate: GridDelegate?
-     
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -63,22 +64,20 @@ final class SecondGrid: UIView, GridType {
         }
     }
     
-    // la grille se connecte au viewModel
     func configure(with viewModelType: GridViewModel, delegate: GridDelegate) {
         self.viewModel = viewModelType
         self.delegate = delegate
         bind(to: self.viewModel)
     }
-    // Au moment du bind avec la var reactive: tu vas renvoyer la methode du delegate.
+    
     private func bind(to viewModel: GridViewModel) {
         viewModel.selectedSpot = { [weak self] spot in
             self?.delegate?.didSelect(spot: spot)
         }
     }
     
-    @IBAction func didSelectButton(_ sender: UIButton) {
+    @IBAction private func didSelectButton(_ sender: UIButton) {
         let index = sender.tag
         viewModel?.didSelectButton(at: index)
-      
-        }
+    }
 }
