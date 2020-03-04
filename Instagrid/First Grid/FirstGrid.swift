@@ -10,7 +10,7 @@ import UIKit
 
 final class FirstGrid: UIView, GridType {
     
-    // MARK: - Outputs
+    // MARK: - Outlets
     
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var upButton: UIButton!
@@ -35,7 +35,6 @@ final class FirstGrid: UIView, GridType {
         initialize()
     }
     
-    /// to find FirstGrid.xib and connect it
     private func initialize() {
         Bundle(for: type(of: self)).loadNibNamed(String(describing: FirstGrid.self),owner: self,options: nil)
         addSubview(contentView)
@@ -78,7 +77,7 @@ final class FirstGrid: UIView, GridType {
         }
     }
     
-    @IBAction func didSelectButton(_ sender: UIButton) {
+    @IBAction private func didSelectButton(_ sender: UIButton) {
         let index = sender.tag
         viewModel?.didSelectButton(at: index)
     }

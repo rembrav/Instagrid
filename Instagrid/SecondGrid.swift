@@ -10,7 +10,7 @@ import UIKit
 
 final class SecondGrid: UIView, GridType {
     
-    // MARK: - Outputs
+    // MARK: - Outlets
 
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var topLeftButton: UIButton!
