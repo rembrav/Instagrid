@@ -26,7 +26,7 @@ final class HomeViewModel {
     
     // MARK: - Inputs
     
-    func viewDidLoad(){
+    func viewDidLoad() {
         appTitleText?("Instagrid")
         swipeTitleText?("Swipe up to share")
         swipeArrowName?("Arrow Up")

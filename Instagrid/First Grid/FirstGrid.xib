@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,8 +24,8 @@
                     <rect key="frame" x="15" y="15" width="270" height="127.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="127.5" id="BSJ-ok-5QE"/>
-                        <constraint firstAttribute="width" constant="270" id="jkE-3B-8dO"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="127.5" id="BSJ-ok-5QE"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="270" id="jkE-3B-8dO"/>
                     </constraints>
                     <state key="normal" image="Plus"/>
                     <connections>
@@ -35,8 +36,9 @@
                     <rect key="frame" x="15" y="157.5" width="127.5" height="127.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="AZk-V1-AQY" secondAttribute="height" multiplier="1:1" id="Lo7-fx-bHg"/>
-                        <constraint firstAttribute="width" constant="127.5" id="kGN-6q-mY0"/>
+                        <constraint firstAttribute="width" secondItem="AZk-V1-AQY" secondAttribute="height" multiplier="1:1" id="ALl-Pb-SgR"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="127.5" id="E14-dd-mbB"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="127.5" id="kGN-6q-mY0"/>
                     </constraints>
                     <state key="normal" image="Plus"/>
                     <connections>
@@ -47,8 +49,9 @@
                     <rect key="frame" x="157.5" y="157.5" width="127.5" height="127.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="PyR-up-LPd" secondAttribute="height" multiplier="1:1" id="6uF-nZ-CSp"/>
-                        <constraint firstAttribute="height" constant="127.5" id="JO5-o3-om9"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="127.5" id="70B-R3-ec7"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="127.5" id="JO5-o3-om9"/>
+                        <constraint firstAttribute="width" secondItem="PyR-up-LPd" secondAttribute="height" multiplier="1:1" id="fev-Xc-LrW"/>
                     </constraints>
                     <state key="normal" image="Plus"/>
                     <connections>
@@ -58,18 +61,18 @@
             </subviews>
             <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="AZk-V1-AQY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="6i6-Le-daa"/>
-                <constraint firstItem="PyR-up-LPd" firstAttribute="leading" secondItem="AZk-V1-AQY" secondAttribute="trailing" constant="15" id="7gz-R7-ikd"/>
-                <constraint firstItem="AZk-V1-AQY" firstAttribute="top" secondItem="DBQ-Ti-x7f" secondAttribute="bottom" constant="15" id="8cI-fA-yCT"/>
-                <constraint firstAttribute="trailing" secondItem="PyR-up-LPd" secondAttribute="trailing" constant="15" id="CKv-OT-9HR"/>
-                <constraint firstItem="PyR-up-LPd" firstAttribute="leading" secondItem="AZk-V1-AQY" secondAttribute="trailing" constant="15" id="IQi-JQ-f1x"/>
-                <constraint firstItem="PyR-up-LPd" firstAttribute="top" secondItem="DBQ-Ti-x7f" secondAttribute="bottom" constant="15" id="XcO-m5-bLA"/>
-                <constraint firstItem="DBQ-Ti-x7f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="ZKB-u9-MyG"/>
-                <constraint firstAttribute="bottom" secondItem="PyR-up-LPd" secondAttribute="bottom" constant="15" id="b7O-qh-AuM"/>
-                <constraint firstAttribute="bottom" secondItem="AZk-V1-AQY" secondAttribute="bottom" constant="15" id="gmy-Aj-gPu"/>
-                <constraint firstItem="DBQ-Ti-x7f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="juR-Hx-rev"/>
-                <constraint firstAttribute="trailing" secondItem="DBQ-Ti-x7f" secondAttribute="trailing" constant="15" id="o0k-8U-JuY"/>
-                <constraint firstItem="AZk-V1-AQY" firstAttribute="top" secondItem="DBQ-Ti-x7f" secondAttribute="bottom" constant="15" id="ozu-VS-fR1"/>
+                <constraint firstItem="AZk-V1-AQY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="1ni-ph-Jtf"/>
+                <constraint firstItem="PyR-up-LPd" firstAttribute="leading" secondItem="AZk-V1-AQY" secondAttribute="trailing" constant="15" id="D6I-dP-4bd"/>
+                <constraint firstAttribute="trailing" secondItem="PyR-up-LPd" secondAttribute="trailing" constant="15" id="HZq-73-vQA"/>
+                <constraint firstItem="AZk-V1-AQY" firstAttribute="top" secondItem="DBQ-Ti-x7f" secondAttribute="bottom" constant="15" id="J3d-z0-0hP"/>
+                <constraint firstItem="AZk-V1-AQY" firstAttribute="top" secondItem="DBQ-Ti-x7f" secondAttribute="bottom" constant="15" id="Mss-TP-sdD"/>
+                <constraint firstItem="DBQ-Ti-x7f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="PNX-1B-xK6"/>
+                <constraint firstAttribute="bottom" secondItem="AZk-V1-AQY" secondAttribute="bottom" constant="15" id="QwV-1T-XU0"/>
+                <constraint firstItem="DBQ-Ti-x7f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="XR8-jA-4MW"/>
+                <constraint firstAttribute="trailing" secondItem="DBQ-Ti-x7f" secondAttribute="trailing" constant="15" id="Y9E-Z1-Azj"/>
+                <constraint firstItem="PyR-up-LPd" firstAttribute="leading" secondItem="AZk-V1-AQY" secondAttribute="trailing" constant="15" id="azc-Hb-g36"/>
+                <constraint firstItem="PyR-up-LPd" firstAttribute="top" secondItem="DBQ-Ti-x7f" secondAttribute="bottom" constant="15" id="eWn-rD-EoE"/>
+                <constraint firstAttribute="bottom" secondItem="PyR-up-LPd" secondAttribute="bottom" constant="15" id="ofS-n9-y2r"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="124.6376811594203" y="61.607142857142854"/>

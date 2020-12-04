@@ -59,7 +59,7 @@ final class HomeViewController: UIViewController {
         }
     }
     
-    private var currentSpot : Spot?
+    private var currentSpot: Spot?
     
     // MARK: - View life cycle
     
@@ -142,14 +142,14 @@ final class HomeViewController: UIViewController {
     }
     
     @objc private func shareAction(_ sender: UISwipeGestureRecognizer) {
-        let translation = CGAffineTransform(translationX: 0, y: -730)
-        let size = CGAffineTransform(scaleX: 0.4, y: 0.4)
+        let translation = CGAffineTransform(translationX: 0, y: -2400)
+        let size = CGAffineTransform(scaleX: 0.1, y: 0.1)
         let transformed = translation.concatenating(size)
         let outLandscapeScreen = CGAffineTransform(translationX: -self.view.bounds.width, y: 1500)
         let rotation = CGAffineTransform(rotationAngle: 260)
         let rotateAndOut = outLandscapeScreen.concatenating(rotation)
         if sender.direction == .up {
-            UIView.animate(withDuration: 0.8, animations: {
+            UIView.animate(withDuration: 1.0, animations: {
                 self.gridContainerView.transform = transformed
                 self.gridContainerView.alpha = 0.5
             }) { _ in
@@ -190,7 +190,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction private func didPressFirstGrid(_ sender: UIButton) {
+    @IBAction func didPressFirstGrid(_ sender: UIButton) {
         viewModel.didPressFirstGrid()
     }
     

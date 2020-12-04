@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD066A7E2410EC39005D8745 /* GridViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD066A7D2410EC39005D8745 /* GridViewModelTests.swift */; };
 		AD575F0F23DF298D00BF7963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD575F0E23DF298D00BF7963 /* AppDelegate.swift */; };
 		AD575F1623DF298D00BF7963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD575F1423DF298D00BF7963 /* Main.storyboard */; };
 		AD575F1823DF298F00BF7963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD575F1723DF298F00BF7963 /* Assets.xcassets */; };
@@ -23,9 +24,23 @@
 		AD74B5DD23F1A0260030A556 /* SecondGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD74B5DC23F1A0260030A556 /* SecondGrid.xib */; };
 		AD74B5DF23F1A0320030A556 /* ThirdGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD74B5DE23F1A0320030A556 /* ThirdGrid.xib */; };
 		AD90AC7123F541F400E9B7C2 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90AC7023F541F400E9B7C2 /* GridViewModel.swift */; };
+		ADC5EF2025349A4A0042D772 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5EF1F25349A4A0042D772 /* HomeViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AD066A752410115A005D8745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD575F0323DF298D00BF7963 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD575F0A23DF298D00BF7963;
+			remoteInfo = Instagrid;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		AD066A702410115A005D8745 /* InstagridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD066A742410115A005D8745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD066A7D2410EC39005D8745 /* GridViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModelTests.swift; sourceTree = "<group>"; };
 		AD575F0B23DF298D00BF7963 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD575F0E23DF298D00BF7963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD575F1523DF298D00BF7963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,9 +59,17 @@
 		AD74B5DC23F1A0260030A556 /* SecondGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondGrid.xib; sourceTree = "<group>"; };
 		AD74B5DE23F1A0320030A556 /* ThirdGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdGrid.xib; sourceTree = "<group>"; };
 		AD90AC7023F541F400E9B7C2 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
+		ADC5EF1F25349A4A0042D772 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AD066A6D2410115A005D8745 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD575F0823DF298D00BF7963 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,10 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD066A712410115A005D8745 /* InstagridTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD066A742410115A005D8745 /* Info.plist */,
+				AD066A7D2410EC39005D8745 /* GridViewModelTests.swift */,
+				ADC5EF1F25349A4A0042D772 /* HomeViewModelTests.swift */,
+			);
+			path = InstagridTests;
+			sourceTree = "<group>";
+		};
 		AD575F0223DF298D00BF7963 = {
 			isa = PBXGroup;
 			children = (
 				AD575F0D23DF298D00BF7963 /* Instagrid */,
+				AD066A712410115A005D8745 /* InstagridTests */,
 				AD575F0C23DF298D00BF7963 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				AD575F0B23DF298D00BF7963 /* Instagrid.app */,
+				AD066A702410115A005D8745 /* InstagridTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +183,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AD066A6F2410115A005D8745 /* InstagridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD066A792410115A005D8745 /* Build configuration list for PBXNativeTarget "InstagridTests" */;
+			buildPhases = (
+				AD066A6C2410115A005D8745 /* Sources */,
+				AD066A6D2410115A005D8745 /* Frameworks */,
+				AD066A6E2410115A005D8745 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD066A762410115A005D8745 /* PBXTargetDependency */,
+			);
+			name = InstagridTests;
+			productName = InstagridTests;
+			productReference = AD066A702410115A005D8745 /* InstagridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AD575F0A23DF298D00BF7963 /* Instagrid */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD575F1F23DF298F00BF7963 /* Build configuration list for PBXNativeTarget "Instagrid" */;
@@ -172,9 +225,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = RPELG;
 				TargetAttributes = {
+					AD066A6F2410115A005D8745 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+						TestTargetID = AD575F0A23DF298D00BF7963;
+					};
 					AD575F0A23DF298D00BF7963 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -194,11 +252,19 @@
 			projectRoot = "";
 			targets = (
 				AD575F0A23DF298D00BF7963 /* Instagrid */,
+				AD066A6F2410115A005D8745 /* InstagridTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AD066A6E2410115A005D8745 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD575F0923DF298D00BF7963 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +283,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AD066A6C2410115A005D8745 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD066A7E2410EC39005D8745 /* GridViewModelTests.swift in Sources */,
+				ADC5EF2025349A4A0042D772 /* HomeViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD575F0723DF298D00BF7963 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +308,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD066A762410115A005D8745 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD575F0A23DF298D00BF7963 /* Instagrid */;
+			targetProxy = AD066A752410115A005D8745 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AD575F1423DF298D00BF7963 /* Main.storyboard */ = {
@@ -254,6 +337,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AD066A772410115A005D8745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KJBH9R4U9Y;
+				INFOPLIST_FILE = InstagridTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RPELG.InstagridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstagridTests/InstagridTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instagrid.app/Instagrid";
+			};
+			name = Debug;
+		};
+		AD066A782410115A005D8745 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KJBH9R4U9Y;
+				INFOPLIST_FILE = InstagridTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RPELG.InstagridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstagridTests/InstagridTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instagrid.app/Instagrid";
+			};
+			name = Release;
+		};
 		AD575F1D23DF298F00BF7963 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -280,6 +412,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -340,6 +473,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -407,6 +541,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AD066A792410115A005D8745 /* Build configuration list for PBXNativeTarget "InstagridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD066A772410115A005D8745 /* Debug */,
+				AD066A782410115A005D8745 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AD575F0623DF298D00BF7963 /* Build configuration list for PBXProject "Instagrid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

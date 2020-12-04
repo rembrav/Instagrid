@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,8 +24,9 @@
                     <rect key="frame" x="15" y="15" width="127.5" height="127.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="127.5" id="XLb-MC-i08"/>
-                        <constraint firstAttribute="width" secondItem="zLH-7J-P6M" secondAttribute="height" multiplier="1:1" id="ZVa-Us-8kd"/>
+                        <constraint firstAttribute="width" secondItem="zLH-7J-P6M" secondAttribute="height" multiplier="1:1" id="0ZP-7H-kX6"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="127.5" id="3Ec-LK-rmv"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="127.5" id="uP8-zO-W9z"/>
                     </constraints>
                     <state key="normal" image="Plus"/>
                     <connections>
@@ -34,6 +36,10 @@
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKh-jo-mT9" userLabel="Photo down">
                     <rect key="frame" x="15" y="157.5" width="270" height="127.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="127.5" id="L5w-62-MYp"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="270" id="nci-LT-Dmj"/>
+                    </constraints>
                     <state key="normal" image="Plus"/>
                     <connections>
                         <action selector="didSelectButton:" destination="-1" eventType="touchUpInside" id="suT-0X-560"/>
@@ -43,8 +49,9 @@
                     <rect key="frame" x="157.5" y="15" width="127.5" height="127.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="hXe-Zf-jSb" secondAttribute="height" multiplier="1:1" id="Ppy-kO-gTK"/>
-                        <constraint firstAttribute="height" constant="127.5" id="vDD-uu-CUV"/>
+                        <constraint firstAttribute="width" secondItem="hXe-Zf-jSb" secondAttribute="height" multiplier="1:1" id="11r-ng-0Bm"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="127.5" id="9sd-o9-Rrb"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="127.5" id="h7y-zn-30d"/>
                     </constraints>
                     <state key="normal" image="Plus"/>
                     <connections>
@@ -54,17 +61,18 @@
             </subviews>
             <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="zLH-7J-P6M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="7Wm-no-vXa"/>
-                <constraint firstItem="BKh-jo-mT9" firstAttribute="top" secondItem="zLH-7J-P6M" secondAttribute="bottom" constant="15" id="8Ck-ql-GC3"/>
-                <constraint firstItem="zLH-7J-P6M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="Deq-dh-Bw3"/>
-                <constraint firstItem="hXe-Zf-jSb" firstAttribute="leading" secondItem="zLH-7J-P6M" secondAttribute="trailing" constant="15" id="Opr-wP-0nz"/>
-                <constraint firstAttribute="trailing" secondItem="BKh-jo-mT9" secondAttribute="trailing" constant="15" id="ZLb-ZL-Bfd"/>
-                <constraint firstItem="BKh-jo-mT9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="gsN-rh-w8i"/>
-                <constraint firstAttribute="bottom" secondItem="BKh-jo-mT9" secondAttribute="bottom" constant="15" id="gwE-Bs-J3n"/>
-                <constraint firstItem="BKh-jo-mT9" firstAttribute="top" secondItem="hXe-Zf-jSb" secondAttribute="bottom" constant="15" id="oO3-dL-7Dx"/>
-                <constraint firstItem="hXe-Zf-jSb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="oY0-tJ-KwQ"/>
-                <constraint firstAttribute="trailing" secondItem="hXe-Zf-jSb" secondAttribute="trailing" constant="15" id="sao-Se-ZW1"/>
-                <constraint firstItem="BKh-jo-mT9" firstAttribute="top" secondItem="zLH-7J-P6M" secondAttribute="bottom" constant="15" id="y0p-Vy-rh1"/>
+                <constraint firstAttribute="bottom" secondItem="BKh-jo-mT9" secondAttribute="bottom" constant="15" id="1bq-kG-kHp"/>
+                <constraint firstItem="BKh-jo-mT9" firstAttribute="top" secondItem="hXe-Zf-jSb" secondAttribute="bottom" constant="15" id="61c-ye-IUL"/>
+                <constraint firstItem="BKh-jo-mT9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="9js-G3-C7m"/>
+                <constraint firstItem="hXe-Zf-jSb" firstAttribute="leading" secondItem="zLH-7J-P6M" secondAttribute="trailing" constant="15" id="E40-6d-dxE"/>
+                <constraint firstItem="hXe-Zf-jSb" firstAttribute="leading" secondItem="zLH-7J-P6M" secondAttribute="trailing" constant="15" id="IMd-9Q-t8C"/>
+                <constraint firstAttribute="trailing" secondItem="BKh-jo-mT9" secondAttribute="trailing" constant="15" id="SKG-Fi-SzG"/>
+                <constraint firstItem="zLH-7J-P6M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="SaT-PL-UPM"/>
+                <constraint firstItem="zLH-7J-P6M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="V7k-2H-yU7"/>
+                <constraint firstAttribute="trailing" secondItem="hXe-Zf-jSb" secondAttribute="trailing" constant="15" id="W8z-zN-QrD"/>
+                <constraint firstItem="hXe-Zf-jSb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="X0U-PT-giG"/>
+                <constraint firstItem="BKh-jo-mT9" firstAttribute="top" secondItem="zLH-7J-P6M" secondAttribute="bottom" constant="15" id="hsm-OV-L8X"/>
+                <constraint firstItem="BKh-jo-mT9" firstAttribute="top" secondItem="zLH-7J-P6M" secondAttribute="bottom" constant="15" id="v2C-rL-13N"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
